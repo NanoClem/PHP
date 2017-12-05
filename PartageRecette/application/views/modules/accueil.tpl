@@ -1,10 +1,17 @@
-<!-- Faire hériter de layout.tpl et récupérer $alea -->
-<!-- {extends file="layout.tpl"} -->
 
-<article>
-  <p>Edito</p>
-</article>
+{extends file='application/views/layout.tpl'}
 
-<article>
-  <p>Tableau alea</p>
-</article>
+{block name=main_content}
+  <article>
+    <p>Edito</p>
+  </article>
+
+  <article>
+    <p>Tableau alea</p>
+    <p>
+      {foreach from=$data.alea item=nb_alea}
+      {$nb_alea} est un nombre aléatoire <br/>
+      {/foreach}
+    </p>
+  </article>
+{/block}

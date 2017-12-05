@@ -1,32 +1,25 @@
 <?php
-// Appeler le constructeur de Smarty
-// faire un isset() pour traiter le cas de l'erreur 404
-
-  require '/application/librairies/Smarty/libs/Smarty.class.php';
+  require 'application/librairies/Smarty/libs/Smarty.class.php';
   require_once 'config.inc.php';
 
-  $smarty = new Smarty();
-  //$smarty -> caching = true;
 
+  $smarty = new Smarty();
+  // $smarty->caching = true;
+  // $smarty->lifetime = 120;
   $data = array();
   $current_page = $_GET['page'];
+  $current_value = ERROR_404;
 
   while( list($key,$value) = each($_PAGES) )
   {
-    if(isset($current_page))  //if a page identification exist
+    if(isset($current_page) || $current_page != "")                                    // Si un identifiant de page existe
     {
-      if($current_page == 'acc')
-        include('/application/modules/'.$value.'.inc.php');
+      if($current_page == $key)
+        $current_value = $value;
     }
-    else
-      include('/application/modules/accueil.inc.php');
   }
-
   //$filtre = ( isset($current_page)?$current_page:"" );
-  $smarty -> assign('data', $data);
-  $smarty -> display('/application/views/modules/accueil.tpl');
-
-  // foreach ($data['alea'] as $element) {
-  //   echo "$element <br>";
-  // }
+  include('application/modules/'.$current_value.'.inc.php');
+  $smarty->assign('data', $data);
+  $smarty->display('application/views/modules/'.$current_value.'.tpl');
 ?>

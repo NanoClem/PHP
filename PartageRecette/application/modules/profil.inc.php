@@ -1,4 +1,4 @@
 <?php
-  $user = array("nom" => "Irlepe", "prenom" => "Brand");
+  $user = array("prenom" => "Brand", "nom" => "Irlepe");
   $data['user'] = $user;
 ?>
