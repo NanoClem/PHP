@@ -4,24 +4,17 @@
   <article>
     <h2>Catégories</h2>
 
-    <table style="text-align:left"><tr> <th>ID</th> <th>Label</th> <th>Description</th> <th>Illustration</th> </tr>
-      {foreach from=$data.categorie item=ligne}
-        <tr>
-
-          {foreach from=$ligne item=categorie}
-            <td>{$categorie}</td>
+<!--ENTREES-->
+    <div style="width:70%; height:30%; border:solid 1px red; float:left">
+      <table style="text-align:rigth">
+        {foreach from=$data.entree item = ligne}
+          {foreach from=$ligne item = entree}
+            <p>{$entree}</p>
           {/foreach}
-          
-        </tr>
-      {/foreach}
-    </table> <br />
+        {/foreach}
+      </table>
+    </div>
 
-<!--Boucle de base pour récupérer les données de Smarty-->
-    {*foreach from=$data.categorie item = ligne*}
-      {*foreach from=$ligne item = categorie*}
-
-      {*/foreach*}
-    {*/foreach*}
     <a href="#">voir les recettes</a>
   </article> <br />
 {/block}
