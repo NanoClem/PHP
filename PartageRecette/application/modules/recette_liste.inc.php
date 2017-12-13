@@ -10,7 +10,7 @@
   {
     $entree_RESULT  = $PDO_BDD->query($entree_REQ);                  // Exécution de la requête sql
     $plat_RESULT    = $PDO_BDD->query($plat_REQ);
-    $dessert_RESULT = $PDO_BDD->query($plat_REQ);
+    $dessert_RESULT = $PDO_BDD->query($dessert_REQ);
   }
   catch (Exception $e)                                               // Interception de l'erreur
   { die ('<div style="font-weight:bold; font-color:red"> Erreur : ' .$e->getMessage(). '</div>'); }

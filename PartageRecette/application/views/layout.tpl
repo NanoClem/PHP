@@ -13,7 +13,7 @@
     {block name=main_content} {/block}
   </body> <br />
 
-  <footer>
+  <footer style="bottom:0; position:fixed;">
     {include 'application/views/layout/layout_pied.inc.tpl'}
   </footer>
 </html>
