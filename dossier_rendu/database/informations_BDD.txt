@@ -1,0 +1,27 @@
+===Base de données recette
+
+== Structure de la table t_utilisateur_uti
+
+|------
+|Colonne|Type|Null|Valeur par défaut
+|------
+|//**UTI_ID**//|bigint(20)|Non|
+|**UTI_LOGIN**|varchar(255)|Non|
+|UTI_MAIL|varchar(255)|Non|
+|UTI_NOM|varchar(255)|Non|
+|UTI_PRENOM|varchar(255)|Non|
+|UTI_PASS|varchar(40)|Non|
+|UTI_ADMIN|tinyint(1)|Non|0
+|UTI_AVATAR|varchar(80)|Oui|NULL
+
+
+== Contenu de la table t_utilisateur_uti : |Login|Pwd|admin|
+
+|JeanBono|$JeanBono|0
+|PatObeur|$PatObeur|0
+|ChiLi|$ChiLi|0
+|ClemDecoop|$ClementDecoopman|1
+
+
+Paramlètres de connexion à la BDD :
+'/application/config/database.php
