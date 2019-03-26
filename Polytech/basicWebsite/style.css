@@ -1,0 +1,13 @@
+/* Feuille de style du formulaire */
+
+.form {
+  position: absolute;
+  margin: auto;
+  padding: 15px;
+  width: 10%;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
