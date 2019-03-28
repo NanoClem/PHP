@@ -1,6 +1,8 @@
 <?php
 
-  // CONNEXION A LA BDD
+  /*========================
+    CONNEXION A LA BDD
+  ========================*/
   function connect($data)
   {
     $connexion = new mysqli($data['server'], $data['user'], $data['passwd'], $data['database']);
@@ -13,8 +15,9 @@
     return $connexion;
   }
 
-
-  // FERMER LA CONNEXION
+  /*========================
+    FERMER LA CONNEXION
+  ========================*/
   function disconnect($connection)
   {
     $connection->close();

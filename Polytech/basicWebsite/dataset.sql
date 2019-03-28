@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS 'article';
+
 CREATE TABLE `article` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `name` varchar(255),
